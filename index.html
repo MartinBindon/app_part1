@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2morrow2day</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="css/codiqa.ext.min.css" rel="stylesheet">
+  <link href="css/jquery.mobile-1.3.1.min.css" rel="stylesheet">
+
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery.mobile-1.3.1.min.js"></script>
+  <script src="js/codiqa.ext.min.js"></script>
+  <script src="js/2morrow2day.js"></script>
+</head>
+<body>
+  <div data-role="page" data-control-title="Home" data-theme="a" id="page1">
+      <div data-role="panel" id="panel3" data-position="left" data-display="reveal"
+      data-theme="b">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Divider
+              </li>
+              <li data-theme="a">
+                  <a href="#page1" data-transition="turn">
+                      Button
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="b" data-role="header">
+          <a data-role="button" href="#page1" data-icon="minus" data-iconpos="left"
+          class="ui-btn-right">
+              Delete
+          </a>
+          <a data-role="button" data-transition="slidefade" href="#page2" data-icon="plus"
+          data-iconpos="left" class="ui-btn-left">
+              New
+          </a>
+          <h2>
+              2morrow2day
+          </h2>
+          <div data-controltype="textblock">
+              <p style="text-align: center;">
+                  <b>
+                      Things to do tomorrow
+                      <br>
+                  </b>
+              </p>
+          </div>
+          <div data-role="fieldcontain" data-controltype="searchinput">
+              <input name="" id="searchinput1" placeholder="" value="Search" type="search">
+          </div>
+      </div>
+      <div data-role="content">
+          <div id="checkboxes1" data-role="fieldcontain" data-controltype="checkboxes">
+              <fieldset data-role="controlgroup" data-type="vertical">
+                  <legend>
+                      Feed Fish
+                  </legend>
+                  <input id="checkbox1" name="" data-theme="b" type="checkbox">
+                  <label for="checkbox1">
+                      3pm
+                  </label>
+              </fieldset>
+          </div>
+          <div id="checkboxes2" data-role="fieldcontain" data-controltype="checkboxes">
+              <fieldset data-role="controlgroup" data-type="vertical">
+                  <legend>
+                      Read book
+                  </legend>
+                  <input id="checkbox2" name="" data-theme="b" type="checkbox">
+                  <label for="checkbox2">
+                      8pm
+                  </label>
+              </fieldset>
+          </div>
+          <div id="checkboxes3" data-role="fieldcontain" data-controltype="checkboxes">
+              <fieldset data-role="controlgroup" data-type="vertical">
+                  <legend>
+                      Early night
+                  </legend>
+                  <input id="checkbox3" name="" data-theme="b" type="checkbox">
+                  <label for="checkbox3">
+                      11pm
+                  </label>
+              </fieldset>
+          </div>
+          <a data-controltype="panelbutton" data-role="button" href="#panel3" data-icon="bars"
+          data-iconpos="left">
+              Today
+          </a>
+      </div>
+      <div data-theme="a" data-role="footer" data-position="fixed">
+          <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+              <ul>
+                  <li>
+                      <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                          Home
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" data-transition="fade" data-theme="" data-icon="gear">
+                          Help
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                          About
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="entry form" data-theme="b" id="page2">
+      <div data-theme="b" data-role="header" data-position="fixed">
+          <a data-role="button" href="#page2" data-icon="check" data-iconpos="left"
+          class="ui-btn-right">
+              Save
+          </a>
+          <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+          class="ui-btn-left">
+              Back
+          </a>
+          <h3>
+              Header
+          </h3>
+      </div>
+      <div data-role="content">
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <label for="textinput1">
+                  Item
+              </label>
+              <input name="" id="textinput1" placeholder="what do you need to remember?"
+              value="" type="text">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <label for="textinput2">
+                  Date
+              </label>
+              <input name="" id="textinput2" placeholder="" value="" data-mini="true"
+              type="date">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <label for="textinput3">
+                  Time
+              </label>
+              <input name="" id="textinput3" placeholder="" value="" data-mini="true"
+              type="time">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <label for="textinput8">
+                  Need to set an alarm?
+              </label>
+              <input name="" id="textinput8" placeholder="" value="" type="time">
+          </div>
+          <hr style="height:3px; background-color:#ccc; border:0; margin-top:12px; margin-bottom:12px;">
+          <div data-role="fieldcontain" data-controltype="textarea">
+              <label for="textarea1">
+                  Enter details here...
+              </label>
+              <textarea name="" id="textarea1" placeholder=""></textarea>
+          </div>
+      </div>
+      <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+          <ul>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="gear">
+                      Help
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="entry_form_Copy" data-theme="b"
+  id="page9">
+      <div data-theme="b" data-role="header" data-position="fixed">
+          <a data-role="button" href="#page2" data-icon="check" data-iconpos="left"
+          class="ui-btn-right">
+              Save
+          </a>
+          <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+          class="ui-btn-left">
+              Back
+          </a>
+          <h3>
+              Header
+          </h3>
+      </div>
+      <div data-role="content">
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <label for="textinput4">
+                  Item
+              </label>
+              <input name="" id="textinput4" placeholder="what do you need to remember?"
+              value="" type="text">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <label for="textinput5">
+                  Date
+              </label>
+              <input name="" id="textinput5" placeholder="dd/mm/yy" value="" data-mini="true"
+              type="date">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <label for="textinput6">
+                  Time
+              </label>
+              <input name="" id="textinput6" placeholder="hh/mm" value="" data-mini="true"
+              type="time">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <label for="textinput7">
+                  Enter details here...
+              </label>
+              <input name="" id="textinput7" placeholder="                                                                                                                                                                  "
+              value="" type="text">
+          </div>
+          <input data-inline="true" data-icon="check" data-iconpos="left" value="Submit"
+          data-mini="true" type="submit">
+      </div>
+      <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+          <ul>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="gear">
+                      Help
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="event detail" id="page3">
+      <div data-theme="b" data-role="header">
+          <a data-role="button" href="#page1" class="ui-btn-left">
+              Back
+          </a>
+          <h3>
+              Feed fish
+          </h3>
+      </div>
+      <div data-role="content">
+          <div data-controltype="textblock">
+              <p>
+                  <b>
+                      Dont forget to feed the fish by 3
+                  </b>
+                  <br>
+              </p>
+          </div>
+          <div data-controltype="textblock">
+              <p>
+                  <br>
+              </p>
+              <p>
+                  <br>
+              </p>
+              <p>
+                  <br>
+              </p>
+              <p>
+                  <br>
+              </p>
+              <p>
+                  <br>
+              </p>
+              <p>
+                  <br>
+              </p>
+              <p>
+                  <br>
+              </p>
+          </div>
+          <div data-role="fieldcontain" data-controltype="toggleswitch">
+              <label for="toggleswitch1">
+                  Set Reminder
+              </label>
+              <select name="toggleswitch1" id="toggleswitch1" data-theme="b" data-role="slider"
+              data-mini="true">
+                  <option value="off">
+                      Off
+                  </option>
+                  <option value="on">
+                      On
+                  </option>
+              </select>
+          </div>
+      </div>
+      <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+          <ul>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="gear">
+                      Help
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="b" data-role="footer" data-position="fixed">
+          <h3>
+              Footer
+          </h3>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="thing1" id="page4">
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+          class="ui-btn-left">
+              Back
+          </a>
+          <h3>
+              Header
+          </h3>
+      </div>
+      <div data-role="content">
+      </div>
+      <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+          <ul>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="gear">
+                      Help
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="footer" data-position="fixed">
+          <h3>
+              Footer
+          </h3>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="thing 2" id="page6">
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+          class="ui-btn-left">
+              Back
+          </a>
+          <h3>
+              Header
+          </h3>
+      </div>
+      <div data-role="content">
+      </div>
+      <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+          <ul>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="gear">
+                      Help
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="footer" data-position="fixed">
+          <h3>
+              Footer
+          </h3>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="thing 3" id="page7">
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+          class="ui-btn-left">
+              Back
+          </a>
+          <h3>
+              Header
+          </h3>
+      </div>
+      <div data-role="content">
+      </div>
+      <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+          <ul>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="gear">
+                      Help
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="footer" data-position="fixed">
+          <h3>
+              Footer
+          </h3>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Choice" id="page8">
+      <div data-theme="b" data-role="header">
+          <h3>
+              2Morrow2Day
+          </h3>
+      </div>
+      <div data-role="content">
+          <div data-controltype="textblock">
+              <p>
+                  <br>
+              </p>
+              <p>
+                  <br>
+              </p>
+              <p style="text-align: center;">
+                  <span style="font-size: large;">
+                      You currently have
+                      <span style="color: rgb(255, 0, 0);">
+                          <strong>
+                              0
+                          </strong>
+                      </span>
+                      reminders.
+                  </span>
+                  <br>
+              </p>
+              <p style="text-align: center;">
+                  <span style="font-size: large;">
+                      Would you like to add one?
+                  </span>
+                  <br>
+              </p>
+              <p>
+                  <br>
+              </p>
+          </div>
+          <a data-role="button" href="#page1">
+              View
+          </a>
+          <a data-role="button" href="#page9">
+              Add
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+          <ul>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="gear">
+                      Help
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="test2" id="page10">
+      <div data-role="panel" id="panel4" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Divider
+              </li>
+              <li data-theme="a">
+                  <a href="" data-transition="slide">
+                      Button
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-role="panel" id="panel2" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Divider
+              </li>
+              <li data-theme="a">
+                  <a href="" data-transition="slide">
+                      Button
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="header">
+          <h3>
+              Header
+          </h3>
+      </div>
+      <div data-role="content">
+          <a data-role="button" href="#page10">
+              Button
+          </a>
+          <a data-controltype="panelbutton" data-role="button" href="#panel2" data-icon="bars"
+          data-iconpos="left">
+              Panel
+          </a>
+          <a data-controltype="panelbutton" data-role="button" href="#panel4" data-icon="bars"
+          data-iconpos="left">
+              Panel
+          </a>
+          <div data-role="navbar" data-iconpos="top">
+              <ul>
+                  <li>
+                      <a href="#page10" data-transition="fade" data-theme="" data-icon="">
+                          Button
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+          <ul>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="gear">
+                      Help
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="footer" data-position="fixed">
+          <h3>
+              Footer
+          </h3>
+      </div>
+  </div>
+</body>
+</html>
